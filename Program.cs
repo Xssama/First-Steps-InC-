@@ -5,9 +5,12 @@ namespace Main
     {
         static void Main(string[] args) 
             {
-               Console.WriteLine("My name is {0} {1}!", "Oussama", "Hsaini");
-               Console.WriteLine("I'm learning {0}", "C#");
-               Console.Write("The sum of {0} + {1} is: {2}", "10", "20", (10+20));
+            string MyName = "Oussama Hsaini";
+            string language = "C#";
+               Console.WriteLine("My name is {0}!", MyName);
+               Console.WriteLine("I'm learning {0}", language);
+            int X = 10, Y = 20;
+               Console.Write("The sum of {0} + {1} is: {2}", X, Y, (X+Y));
                
                Console.ReadKey();
             }
