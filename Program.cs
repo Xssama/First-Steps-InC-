@@ -8,27 +8,16 @@ namespace Main
         static void Main(string[] args)
         {
 
-            var str = "6/12/2023";
-            DateTime dt;
+           // String Interpolation
 
-            var isValidDate = DateTime.TryParse(str, out dt);
+            string firstName = "Mohammed";
+            string lastName = "Abu-Hadhoud";
+            string code = "107";
 
-            if (isValidDate)
-                Console.WriteLine(dt);
-            else
-                Console.WriteLine($"{str} is not a valid date string");
-
-            //invalid string date
-            var str2 = "6/65/2023";
-            DateTime dt2;
-
-            var isValidDate2 = DateTime.TryParse(str2, out dt2);
-
-            if (isValidDate2)
-                Console.WriteLine(dt2);
-            else
-                Console.WriteLine($"{str2} is not a valid date string");
-
+            //You shold use $ to $ to identify an interpolated string 
+            string fullName = $"Mr. {firstName} {lastName}, Code: {code}";
+            Console.WriteLine($"Mr. {firstName} {lastName}, Code: {code}");
+            Console.WriteLine(fullName);
             Console.ReadKey();
 
         }
