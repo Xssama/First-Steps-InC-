@@ -2,27 +2,33 @@
 
 namespace Main
 {
-    internal class Program
-    {
-
-
-        static void Main(string[] args)
+   internal class Program
         {
 
-            dynamic MyDynamicVar = 100;
-            Console.WriteLine("Value: {0}, Type: {1}", MyDynamicVar, MyDynamicVar.GetType());
+        static void Main(string[] args)
+            {
 
-            MyDynamicVar = "Hello World!!";
-            Console.WriteLine("Value: {0}, Type: {1}", MyDynamicVar, MyDynamicVar.GetType());
+            //assigns default value 01/01/0001 00:00:00
+            DateTime dt1 = new DateTime();
 
-            MyDynamicVar = true;
-            Console.WriteLine("Value: {0}, Type: {1}", MyDynamicVar, MyDynamicVar.GetType());
+            //assigns year, month, day
+            DateTime dt2 = new DateTime(2023, 12, 31);
 
-            MyDynamicVar = DateTime.Now;
-            Console.WriteLine("Value: {0}, Type: {1}", MyDynamicVar, MyDynamicVar.GetType());
+            //assigns year, month, day, hour, min, seconds
+            DateTime dt3 = new DateTime(2023, 12, 31, 5, 10, 20);
+
+            //assigns year, month, day, hour, min, seconds, UTC timezone
+            DateTime dt4 = new DateTime();
+            dt4 = DateTime.Now;
+
+            Console.WriteLine(dt1);
+            Console.WriteLine(dt2);
+            Console.WriteLine(dt3);
+            Console.WriteLine(dt4);
+
 
             Console.ReadKey();
 
+            }
         }
-    }
 }
