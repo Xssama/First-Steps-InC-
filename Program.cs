@@ -6,29 +6,18 @@ namespace Main
         {
 
         static void Main(string[] args)
-            {
+        {
 
-            //assigns default value 01/01/0001 00:00:00
-            DateTime dt1 = new DateTime();
+            //number of 100-nanosecond intervals that have elapsed
+            //since January 1, 0001, at 00:00:00.000 in the Gregorian calendar. 
 
-            //assigns year, month, day
-            DateTime dt2 = new DateTime(2023, 12, 31);
-
-            //assigns year, month, day, hour, min, seconds
-            DateTime dt3 = new DateTime(2023, 12, 31, 5, 10, 20);
-
-            //assigns year, month, day, hour, min, seconds, UTC timezone
-            DateTime dt4 = new DateTime();
-            dt4 = DateTime.Now;
-
-            Console.WriteLine(dt1);
-            Console.WriteLine(dt2);
-            Console.WriteLine(dt3);
-            Console.WriteLine(dt4);
+            DateTime dt = new DateTime();
+            Console.WriteLine(DateTime.MinValue.Ticks);  //min value of ticks
+            Console.WriteLine(DateTime.MaxValue.Ticks); // max value of ticks
 
 
             Console.ReadKey();
 
-            }
         }
+    }
 }
