@@ -8,18 +8,27 @@ namespace Main
         static void Main(string[] args)
         {
 
-            DateTime dt1 = new DateTime(2015, 12, 20);
-            DateTime dt2 = new DateTime(2016, 12, 31, 5, 10, 20);
-            TimeSpan time = new TimeSpan(10, 5, 25, 50);
+            var str = "6/12/2023";
+            DateTime dt;
 
-            Console.WriteLine(dt2 + time); // 1/10/2017 10:36:10 AM
-            Console.WriteLine(dt2 - dt1); //377.05:10:20
-            Console.WriteLine(dt1 == dt2); //False
-            Console.WriteLine(dt1 != dt2); //True
-            Console.WriteLine(dt1 > dt2); //False
-            Console.WriteLine(dt1 < dt2); //True
-            Console.WriteLine(dt1 >= dt2); //False
-            Console.WriteLine(dt1 <= dt2); //True
+            var isValidDate = DateTime.TryParse(str, out dt);
+
+            if (isValidDate)
+                Console.WriteLine(dt);
+            else
+                Console.WriteLine($"{str} is not a valid date string");
+
+            //invalid string date
+            var str2 = "6/65/2023";
+            DateTime dt2;
+
+            var isValidDate2 = DateTime.TryParse(str2, out dt2);
+
+            if (isValidDate2)
+                Console.WriteLine(dt2);
+            else
+                Console.WriteLine($"{str2} is not a valid date string");
+
             Console.ReadKey();
 
         }
