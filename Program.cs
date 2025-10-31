@@ -5,19 +5,27 @@ namespace Main
    internal class Program
         {
 
+        enum WeekDays
+        {
+            Monday,
+            Tuesday,
+            Wednesday,
+            Thursday,
+            Friday,
+            Saturday,
+            Sunday
+        }
+
         static void Main(string[] args)
         {
 
-           // String Interpolation
+            Console.WriteLine(WeekDays.Friday);
 
-            string firstName = "Mohammed";
-            string lastName = "Abu-Hadhoud";
-            string code = "107";
+            int wd = (int)WeekDays.Friday;
+            Console.WriteLine(wd);
 
-            //You shold use $ to $ to identify an interpolated string 
-            string fullName = $"Mr. {firstName} {lastName}, Code: {code}";
-            Console.WriteLine($"Mr. {firstName} {lastName}, Code: {code}");
-            Console.WriteLine(fullName);
+            var week_day = (WeekDays) 4;
+            Console.WriteLine(week_day);
             Console.ReadKey();
 
         }
