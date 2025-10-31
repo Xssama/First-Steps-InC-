@@ -4,29 +4,50 @@ namespace Main
 {
     internal class Program
     {
+        enum enWeekDays
+        {
+            Monday,     // 0
+            Tuesday,    // 1
+            Wednesday,  // 2
+            Thursday,   // 3
+            Friday,     // 4
+            Saturday,   // 5
+            Sunday      // 6
+        }
 
+        //if you set a value , it will auto number everything after it.
+        enum enCategories
+        {
+            Electronics,    // 0
+            Food,           // 1
+            Automotive = 6, // 6
+            Arts,           // 7
+            BeautyCare,     // 8
+            Fashion         // 9
+        }
+
+
+        //Enum can have any numarical data type byte, sbyte, short, ushort, int, uint, long, or ulong
+        //but not string
+
+        enum enCategories2 : byte
+        {
+            Electronics = 1,
+            Food = 5,
+            Automotive = 6,
+            Arts = 10,
+            BeautyCare = 11,
+            Fashion = 15
+        }
 
 
         static void Main(string[] args)
         {
 
-            //get default value using default(type)
-            int i = default(int); // 0
-            float f = default(float);// 0
-            decimal d = default(decimal);// 0
-            bool b = default(bool);// false
-            char c = default(char);// '\0'
+            enWeekDays WeekDays;
 
-            // C# 7.1 onwards
-            //get default value using default
-            int i2 = default; // 0
-            float f2 = default;// 0
-            decimal d2 = default;// 0
-            bool b2 = default;// false
-            char c2 = default;// '\0'
-
-
-
+            WeekDays = enWeekDays.Friday;
+            Console.WriteLine(WeekDays);
             Console.ReadKey();
 
         }
