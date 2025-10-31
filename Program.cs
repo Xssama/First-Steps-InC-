@@ -8,21 +8,12 @@ namespace Main
         static void Main(string[] args)
         {
 
-            DateTime dt = new DateTime(2025, 10, 31);
-
+            DateTime dt1 = new DateTime(2025, 10, 31);
+            DateTime dt2 = new DateTime(2024, 10, 31);
             // Hours, Minutes, Seconds
-            TimeSpan ts = new TimeSpan(49, 25, 34);
-            Console.WriteLine(ts);
-            Console.WriteLine(ts.Days);
-            Console.WriteLine(ts.Hours);
-            Console.WriteLine(ts.Minutes);
-            Console.WriteLine(ts.Seconds);
+            TimeSpan ts = dt1.Subtract(dt2);
 
-            //this will add time span to the date.
-            DateTime newDate = dt.Add(ts);
-
-            Console.WriteLine(newDate);
-
+            Console.WriteLine(ts.TotalDays);
             Console.ReadKey();
 
         }
