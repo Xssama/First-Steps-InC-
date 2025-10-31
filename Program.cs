@@ -6,36 +6,20 @@ namespace Main
     {
 
 
-        struct stStudent
-        {
-            public string FirstName;
-            public string LastName;
-        }
-
         static void Main(string[] args)
         {
 
-            //A struct object can be created with or without the new operator,
-            //same as primitive type variables.
+            dynamic MyDynamicVar = 100;
+            Console.WriteLine("Value: {0}, Type: {1}", MyDynamicVar, MyDynamicVar.GetType());
 
-            stStudent Student;
-            stStudent Student2 = new stStudent();
+            MyDynamicVar = "Hello World!!";
+            Console.WriteLine("Value: {0}, Type: {1}", MyDynamicVar, MyDynamicVar.GetType());
 
+            MyDynamicVar = true;
+            Console.WriteLine("Value: {0}, Type: {1}", MyDynamicVar, MyDynamicVar.GetType());
 
-            Student.FirstName = "Mohammed";
-            Student.LastName = "Abu-Hadhoud";
-
-
-            Console.WriteLine(Student.FirstName);
-            Console.WriteLine(Student.LastName);
-
-
-            Student2.FirstName = "Ali";
-            Student2.LastName = "Ahmed";
-
-
-            Console.WriteLine(Student2.FirstName);
-            Console.WriteLine(Student2.LastName);
+            MyDynamicVar = DateTime.Now;
+            Console.WriteLine("Value: {0}, Type: {1}", MyDynamicVar, MyDynamicVar.GetType());
 
             Console.ReadKey();
 
