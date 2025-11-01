@@ -7,16 +7,12 @@ namespace Main
 
         static void Main(string[] args)
         {
-            try
+            Random rnd = new Random();
+
+            for (int j = 0; j < 100; j++)
             {
-                int[] myNumbers = { 1, 2, 3 };
-                Console.WriteLine(myNumbers[10]);
+                Console.WriteLine(rnd.Next(10, 21)); // returns random integers >= 10 and < 20
             }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-            }
-            Console.ReadLine();
         }
     }
 }
