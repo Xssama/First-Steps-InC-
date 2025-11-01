@@ -5,27 +5,32 @@ namespace Main
    internal class Program
         {
 
-        enum WeekDays
-        {
-            Monday,
-            Tuesday,
-            Wednesday,
-            Thursday,
-            Friday,
-            Saturday,
-            Sunday
-        }
-
         static void Main(string[] args)
         {
 
-            Console.WriteLine(WeekDays.Friday);
+            int number = 10, result;
+            bool flag = true;
 
-            int wd = (int)WeekDays.Friday;
-            Console.WriteLine(wd);
+            result = +number;
+            Console.WriteLine("+number = " + result);
 
-            var week_day = (WeekDays) 4;
-            Console.WriteLine(week_day);
+            result = -number;
+            Console.WriteLine("-number = " + result);
+
+            result = ++number;
+            Console.WriteLine("++number = " + result);
+
+            result = --number;
+            Console.WriteLine("--number = " + result);
+
+            Console.WriteLine("!flag = " + (!flag));
+
+            Console.WriteLine((number++));
+            Console.WriteLine((number));
+
+            Console.WriteLine((++number));
+            Console.WriteLine((number));
+
             Console.ReadKey();
 
         }
