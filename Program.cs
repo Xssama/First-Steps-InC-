@@ -7,13 +7,18 @@ namespace Main
 
         static void Main(string[] args)
         {
-            int i = 1;
-            do
+            char[] gender = { 'm', 'f', 'm', 'm', 'm', 'f', 'f', 'm', 'm', 'f' };
+            int male = 0, female = 0;
+            foreach (char g in gender)
             {
-                Console.WriteLine("C# while Loop: Iteration {0}", i);
-                i++;
-
-            } while (i <= 5);
+                if (g == 'm')
+                    male++;
+                else if (g == 'f')
+                    female++;
+            }
+            Console.WriteLine("Number of male = {0}", male);
+            Console.WriteLine("Number of female = {0}", female);
+            Console.WriteLine(gender.Length);
             Console.ReadKey();
 
         }
