@@ -1,5 +1,5 @@
 ﻿using System;
-
+using System.Linq;
 namespace Main
 {
    internal class Program
@@ -7,18 +7,15 @@ namespace Main
 
         static void Main(string[] args)
         {
-            char[] gender = { 'm', 'f', 'm', 'm', 'm', 'f', 'f', 'm', 'm', 'f' };
-            int male = 0, female = 0;
-            foreach (char g in gender)
-            {
-                if (g == 'm')
-                    male++;
-                else if (g == 'f')
-                    female++;
-            }
-            Console.WriteLine("Number of male = {0}", male);
-            Console.WriteLine("Number of female = {0}", female);
-            Console.WriteLine(gender.Length);
+            // Note that we used System.Linq above.
+
+            int[] numbers = { 51, -1, 2,14,18, 40, 178 };
+
+            // get the minimum element
+            Console.WriteLine("Smallest  Element: " + numbers.Min());
+
+            // Max() returns the largest number in array
+            Console.WriteLine("Largest Element: " + numbers.Max());
             Console.ReadKey();
 
         }
